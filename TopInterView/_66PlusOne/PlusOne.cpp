@@ -1,8 +1,10 @@
-#include <iostream>
-#include <vector>
-using namespace std;
+//
+// Created by fk035 on 2022/4/20.
+//
 
-vector<int> plusOne(vector<int> &digits) {
+#include "PlusOne.h"
+
+vector<int> PlusOne::plusOne(vector<int> &digits) {
     bool plusOne = false;
     for (int i = digits.size() - 1; i == 0; i--)
     {
@@ -34,13 +36,4 @@ vector<int> plusOne(vector<int> &digits) {
          digits.begin() + digits.size(),
          result.begin() + 1);
     return result;
-}
-
-int main() {
-    vector<int> result(3);
-    result[0] = 1;
-    result[1] = 2;
-    result[2] = 3;
-    plusOne(result);
-    return 0;
 }
